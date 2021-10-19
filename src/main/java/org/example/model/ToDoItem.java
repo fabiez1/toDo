@@ -20,10 +20,11 @@ public class ToDoItem {
         setDone(done);
         setPerson(person);
     }
-/**
+/** Isn't working...
+ *
     private boolean isOverDue() {
         LocalDate now = LocalDate.now();
-        if(now >= deadLine) {
+        if(now > deadLine) {
             return true;
         }
         return false;
