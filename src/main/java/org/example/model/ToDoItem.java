@@ -20,9 +20,17 @@ public class ToDoItem {
         setDone(done);
         setPerson(person);
     }
-
+/**
+    private boolean isOverDue() {
+        LocalDate now = LocalDate.now();
+        if(now >= deadLine) {
+            return true;
+        }
+        return false;
+    }
+*/
     public void getSummary() {
-        System.out.println("{ id: " + id + ", title: " + title + ", taskdescription: " + taskDescription + ", deadline: " + deadLine + ", done: " + done + ", Person: " + person);
+        System.out.println("{ id: " + id + ", title: " + title + ", taskdescription: " + taskDescription + ", deadline: " + deadLine + ", done: " + done + ", Person: " + person + " }");
     }
 
     public int getId() {
