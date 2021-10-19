@@ -13,6 +13,10 @@ public class ToDoItemTask {
         setAssignee(assignee);
     }
 
+    public void getSummary() {
+        System.out.println("{ id: " + id + ", assigned: " + assigned + ", todoitem: " + toDoItem + ", assignee: " + assignee + " }");
+    }
+
     public int getId() {
         return id;
     }
