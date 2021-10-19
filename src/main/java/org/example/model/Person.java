@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 public class Person {
     private int id;
@@ -11,9 +11,9 @@ public class Person {
                   String lastName,
                   String email) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmail(email);
     }
 
     public int getId() {
@@ -45,6 +45,6 @@ public class Person {
     }
 
     public void getSummary() {
-        System.out.println("{ id: " + id + ", Name:" + firstName + " " + lastName + ", email: " + email);
+        System.out.println("{ id: " + id + ", Name:" + firstName + " " + lastName + ", email: " + email + " }");
     }
 }
