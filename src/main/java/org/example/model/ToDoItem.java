@@ -20,16 +20,11 @@ public class ToDoItem {
         setDone(done);
         setPerson(person);
     }
-/** Isn't working...
- *
+    /** isOverDue() must be able to compare with > or < */
     private boolean isOverDue() {
-        LocalDate now = LocalDate.now();
-        if(now > deadLine) {
-            return true;
-        }
-        return false;
+        return LocalDate.now().equals(deadLine);
     }
-*/
+
     public void getSummary() {
         System.out.println("{ id: " + id + ", title: " + title + ", taskdescription: " + taskDescription + ", deadline: " + deadLine + ", done: " + done + ", Person: " + person + " }");
     }
