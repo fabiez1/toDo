@@ -22,7 +22,8 @@ public class ToDoItem {
     }
     /** isOverDue() must be able to compare with > or < */
     private boolean isOverDue() {
-        return LocalDate.now().equals(deadLine);
+        LocalDate check = LocalDate.now();
+        return (check.isAfter(deadLine) || check.isEqual(deadLine));
     }
 
     public void getSummary() {
