@@ -20,7 +20,7 @@ public class ToDoItem {
         setDone(done);
         setPerson(person);
     }
-    /** isOverDue() must be able to compare with > or < */
+    
     private boolean isOverDue() {
         LocalDate check = LocalDate.now();
         return (check.isAfter(deadLine) || check.isEqual(deadLine));
