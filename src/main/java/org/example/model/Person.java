@@ -45,6 +45,6 @@ public class Person {
     }
 
     public void getSummary() {
-        System.out.println("{ id: " + id + ", Name:" + firstName + " " + lastName + ", email: " + email + " }");
+        System.out.println("{ id: " + id + ", Name: " + firstName + " " + lastName + ", email: " + email + " }");
     }
 }
