@@ -12,8 +12,6 @@ public class App
                 "jerryrice@nfl.com");
 
         fabz.getSummary();
-        for(AppRole user : AppRole.values()) {
-            System.out.println(user);
-        }
+
     }
 }

@@ -3,6 +3,7 @@ package org.example.model;
 import org.example.model.Person;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class ToDoItem {
     private int id;
@@ -76,5 +77,29 @@ public class ToDoItem {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ToDoItem toDoItem = (ToDoItem) o;
+        return id == toDoItem.id && done == toDoItem.done && Objects.equals(title, toDoItem.title) && Objects.equals(taskDescription, toDoItem.taskDescription) && Objects.equals(deadLine, toDoItem.deadLine);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, taskDescription, deadLine, done);
+    }
+
+    @Override
+    public String toString() {
+        return "ToDoItem{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", taskDescription='" + taskDescription + '\'' +
+                ", deadLine=" + deadLine +
+                ", done=" + done +
+                '}';
     }
 }

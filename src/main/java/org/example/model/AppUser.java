@@ -5,9 +5,16 @@ import java.util.Objects;
 public class AppUser {
     private String username;
     private String password;
+    private String credentials;
     AppRole role;
 
     public AppUser(String username, String password, AppRole role) {
+        if(username.equals(null) || username.equals("")) {
+            throw new RuntimeException("Username was empty");
+        } else if(password.equals(null) || password.equals("")) {
+            throw new RuntimeException("Password was empty");
+        }
+
         this.username = username;
         this.password = password;
         this.role = role;
@@ -37,6 +44,14 @@ public class AppUser {
         this.role = role;
     }
 
+    public String getCredentials() {
+        return credentials;
+    }
+
+    public void setCredentials(String credentials) {
+        this.credentials = credentials;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -55,6 +70,7 @@ public class AppUser {
         return "AppUser{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", credentials='" + credentials + '\'' +
                 ", role=" + role +
                 '}';
     }
