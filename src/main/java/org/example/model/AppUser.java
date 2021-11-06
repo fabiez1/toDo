@@ -13,6 +13,8 @@ public class AppUser {
             throw new RuntimeException("Username was empty");
         } else if(password.equals(null) || password.equals("")) {
             throw new RuntimeException("Password was empty");
+        } else if(role.equals(null) || role.equals("")) {
+            throw new RuntimeException("Role was empty");
         }
 
         this.username = username;
@@ -70,7 +72,6 @@ public class AppUser {
         return "AppUser{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", credentials='" + credentials + '\'' +
                 ", role=" + role +
                 '}';
     }
