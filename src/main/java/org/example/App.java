@@ -10,6 +10,5 @@ public class App
                 "Jerry",
                 "Rice",
                 "jerryrice@nfl.com");
-
     }
 }
