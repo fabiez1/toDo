@@ -27,10 +27,6 @@ public class ToDoItem {
         return (check.isAfter(deadLine) || check.isEqual(deadLine));
     }
 
-    public void getSummary() {
-        System.out.println("{ id: " + id + ", title: " + title + ", taskdescription: " + taskDescription + ", deadline: " + deadLine + ", done: " + done + ", Person: " + person + " }");
-    }
-
     public int getId() {
         return id;
     }
