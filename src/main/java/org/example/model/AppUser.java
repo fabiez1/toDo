@@ -5,7 +5,6 @@ import java.util.Objects;
 public class AppUser {
     private String username;
     private String password;
-    private String credentials;
     AppRole role;
 
     public AppUser(String username, String password, AppRole role) {
@@ -44,22 +43,6 @@ public class AppUser {
 
     public void setRole(AppRole role) {
         this.role = role;
-    }
-
-    public String getCredentials() {
-        return credentials;
-    }
-
-    public void setCredentials(String credentials) {
-        this.credentials = credentials;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AppUser appUser = (AppUser) o;
-        return Objects.equals(username, appUser.username) && Objects.equals(password, appUser.password) && role == appUser.role;
     }
 
     @Override

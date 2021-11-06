@@ -1,6 +1,5 @@
 package org.example.model;
 
-import org.junit.Assert;
 import org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -60,14 +59,5 @@ public class AppUserTest {
         appUser.setRole(role);
 
         assertEquals(expected, appUser.getRole());
-    }
-
-    @Test
-    public void getCredentials() {
-        appUser.getCredentials();
-    }
-
-    @Test
-    public void setCredentials() {
     }
 }
