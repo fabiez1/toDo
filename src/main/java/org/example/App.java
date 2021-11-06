@@ -11,7 +11,5 @@ public class App
                 "Rice",
                 "jerryrice@nfl.com");
 
-        fabz.getSummary();
-
     }
 }
