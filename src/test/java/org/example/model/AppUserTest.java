@@ -8,12 +8,7 @@ import static org.junit.Assert.*;
 
 public class AppUserTest {
 
-    private AppUser appUser;
-
-    @Before
-    public void setUp() {
-        appUser = new AppUser("fabz", "fabzfabz", AppRole.ROLE_APP_USER);
-    }
+    private AppUser appUser = new AppUser("fabz", "fabzfabz", AppRole.ROLE_APP_USER);
 
     @Test
     public void getUsername() {
@@ -49,7 +44,9 @@ public class AppUserTest {
 
     @Test
     public void getRole() {
-        appUser.getRole();
+        AppRole expected = AppRole.ROLE_APP_USER;
+
+        assertEquals(expected, appUser.getRole());
     }
 
     @Test
