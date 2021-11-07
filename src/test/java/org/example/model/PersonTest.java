@@ -11,12 +11,16 @@ public class PersonTest {
 
     @Test
     public void getId() {
-        test.getId();
+        int expected = 3;
+
+        assertEquals(expected, test.getId());
     }
 
     @Test
     public void getFirstName() {
-        test.getFirstName();
+        String expected = "First";
+
+        assertEquals(expected, test.getFirstName());
     }
 
     @Test
@@ -29,7 +33,9 @@ public class PersonTest {
 
     @Test
     public void getLastName() {
-        test.getLastName();
+        String expected = "Last";
+
+        assertEquals(expected, test.getLastName());
     }
 
     @Test
@@ -42,7 +48,9 @@ public class PersonTest {
 
     @Test
     public void getEmail() {
-        test.getEmail();
+        String expected = "first.last@gmail.com";
+
+        assertEquals(expected, test.getEmail());
     }
 
     @Test
@@ -55,7 +63,13 @@ public class PersonTest {
 
     @Test
     public void getCredentials() {
-        testCredentials.toString();
+        String testUser = "Fila";
+        String testPass = "test123";
+        AppRole testRole = AppRole.ROLE_APP_USER;
+
+        assertEquals(testUser, testCredentials.getUsername());
+        assertEquals(testPass, testCredentials.getPassword());
+        assertEquals(testRole, testCredentials.getRole());
     }
 
     @Test
