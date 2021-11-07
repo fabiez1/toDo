@@ -46,6 +46,14 @@ public class AppUser {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AppUser appUser = (AppUser) o;
+        return Objects.equals(username, appUser.username) && Objects.equals(password, appUser.password) && role == appUser.role;
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(username, password, role);
     }

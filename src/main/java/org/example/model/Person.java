@@ -23,6 +23,8 @@ public class Person {
         return id;
     }
 
+    public void setId(int id) { this.id = id; }
+
     public String getFirstName() {
         return firstName;
     }
@@ -56,16 +58,6 @@ public class Person {
     }
 
     @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -76,5 +68,15 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(id, firstName, lastName, email);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
