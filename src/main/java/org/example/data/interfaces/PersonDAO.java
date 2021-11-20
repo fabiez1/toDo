@@ -1,4 +1,4 @@
-package org.example.dao;
+package org.example.data.interfaces;
 
 import org.example.model.Person;
 

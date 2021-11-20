@@ -1,4 +1,4 @@
-package org.example.dao;
+package org.example.data.interfaces;
 
 import org.example.model.AppUser;
 
@@ -8,5 +8,5 @@ public interface AppUserDAO {
     AppUser persist(AppUser appUser);
     AppUser findByUsername(String username);
     Collection<AppUser> findAll();
-    void remove(String username);
+    void remove(AppUser username);
 }

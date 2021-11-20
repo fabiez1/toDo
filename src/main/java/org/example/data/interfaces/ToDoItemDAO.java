@@ -1,4 +1,4 @@
-package org.example.dao;
+package org.example.data.interfaces;
 
 import org.example.model.ToDoItem;
 
@@ -14,5 +14,5 @@ public interface ToDoItemDAO {
     Collection<ToDoItem> findByPersonId(int personId);
     Collection<ToDoItem> findByDeadlineBefore(LocalDate date);
     Collection<ToDoItem> findByDeadlineAfter(LocalDate date);
-    void remove(int id);
+    void remove(ToDoItem id);
 }

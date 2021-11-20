@@ -1,4 +1,4 @@
-package org.example.dao;
+package org.example.data.interfaces;
 
 import org.example.model.ToDoItemTask;
 
@@ -10,5 +10,5 @@ public interface ToDoItemTaskDAO {
     Collection<ToDoItemTask> findAll();
     Collection<ToDoItemTask> findAssignedStatus(boolean status);
     Collection<ToDoItemTask> findByPersonId(int personId);
-    void remove(int id);
+    void remove(ToDoItemTask id);
 }
